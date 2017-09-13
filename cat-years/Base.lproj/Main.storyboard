@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cat_years" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS2-kB-8na">
+                                <rect key="frame" x="20" y="50" width="335" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOW-iz-I9i">
+                                <rect key="frame" x="187.5" y="255" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.84705882349999995" green="0.2784313725" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="f5Z-NV-ZEf">
+                                <rect key="frame" x="70" y="275" width="235" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="6OM-BJ-kae"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZ5-UY-bqG">
+                                <rect key="frame" x="157.5" y="155" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="hX8-Es-UiN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How old is your cat?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDf-5o-d14">
+                                <rect key="frame" x="109.5" y="111" width="156" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z59-kJ-3TY">
+                                <rect key="frame" x="117" y="205" width="141" height="30"/>
+                                <state key="normal" title="Get Age In Cat Years"/>
+                                <connections>
+                                    <action selector="getAgeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5l-3t-zuo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dOW-iz-I9i" firstAttribute="top" secondItem="z59-kJ-3TY" secondAttribute="bottom" constant="20" id="3yE-4e-zSw"/>
+                            <constraint firstItem="f5Z-NV-ZEf" firstAttribute="top" secondItem="dOW-iz-I9i" secondAttribute="bottom" constant="20" id="65O-Af-GfO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5Z-NV-ZEf" secondAttribute="trailing" constant="70" id="Nb7-6i-kxo"/>
+                            <constraint firstItem="jZ5-UY-bqG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pxc-zX-JuU"/>
+                            <constraint firstItem="f5Z-NV-ZEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="SCa-ay-lU9"/>
+                            <constraint firstItem="z59-kJ-3TY" firstAttribute="top" secondItem="jZ5-UY-bqG" secondAttribute="bottom" constant="20" id="UUS-Fg-y8p"/>
+                            <constraint firstItem="dOW-iz-I9i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VL0-9R-JcV"/>
+                            <constraint firstItem="jDf-5o-d14" firstAttribute="top" secondItem="SS2-kB-8na" secondAttribute="bottom" constant="20" id="VXI-bG-fr0"/>
+                            <constraint firstItem="SS2-kB-8na" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="YKv-8Y-QNq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SS2-kB-8na" secondAttribute="trailing" constant="20" id="cUc-rU-wkG"/>
+                            <constraint firstItem="jDf-5o-d14" firstAttribute="centerX" secondItem="SS2-kB-8na" secondAttribute="centerX" id="lFG-07-ZHU"/>
+                            <constraint firstItem="SS2-kB-8na" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oQg-Mr-rpF"/>
+                            <constraint firstItem="jZ5-UY-bqG" firstAttribute="top" secondItem="jDf-5o-d14" secondAttribute="bottom" constant="20" id="vp4-FQ-Jxf"/>
+                            <constraint firstItem="z59-kJ-3TY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wmB-T9-2fF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="jZ5-UY-bqG" id="3XF-8C-mmV"/>
+                        <outlet property="outputLbl" destination="dOW-iz-I9i" id="vtf-wA-yB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat" width="1920" height="1440"/>
+    </resources>
 </document>
